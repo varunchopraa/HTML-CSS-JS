@@ -1,6 +1,22 @@
+@media(min-width: 500px){
+	.responsive{
+		display:inline-block;
+		width: 200px;
+		border: 1px solid black;
+	}
+}
+
+@media(min-width: 1000px){
+	.responsive{
+		display:inline-block;
+		width: 500px;
+		border:1px solid black;
+	}
+}
+
 body{
-	background: black;
 	color: white;
+	background: green;
 }
 
 a{
