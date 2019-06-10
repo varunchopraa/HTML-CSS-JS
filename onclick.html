@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<script
+	  src="http://code.jquery.com/jquery-3.4.1.min.js"
+	  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	  crossorigin="anonymous"></script>
+	</head>
+
+		<body>
+		<h1 id="text" onclick="alert('hello');">Hello</h1>
+		<br>
+		<h1 id="console" onclick="console.log('hello');">Hello console</h1>
+		<br>
+		<h1 id="title" onclick="$('#title').html('Goodbye');">
+ 		Hello to goodbye
+ 		</h1>	
+ 		<br>
+ 		<h1 id="lolz">Script</h1>
+		</body>
+		<br>
+		<h1 onclick="sayLolz();">Lolz alert through script</h1>
+		<br>
+		<h1 id="title1" onclick="sayGoodbye()">Hello</h1>
+
+		<script type="text/javascript">
+			$('#lolz').html('Script applied to "Script".');
+		</script>
+
+		<script type="text/javascript">
+			function sayLolz(){
+				alert('lolz');
+			};
+		</script>
+
+		<script type="text/javascript">
+    	function sayGoodbye(){
+        console.log("goodbye");
+        $("#title1").html("Goodbye");
+        $("#title1").click(function () {
+            $("#title1").html("Hello");
+            $("#title1").off("click");
+    	    });
+   	 	};
+		</script>
+</html>
